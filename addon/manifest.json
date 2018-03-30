@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Find+1",
+  "version": "0.1",
+  "description": "Search text in any page linked from the current page",
+  "author": "Mozilla (https://mozilla.org/)",
+  "homepage_url": "https://github.com/ianb/find-plus-one/",
+  "applications": {
+    "gecko": {
+      "id": "find-plus-one@mozilla.org",
+      "strict_min_version": "57.0a1"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "side-view.svg",
+    "default_title": "Find in anything linked from this page"
+  },
+  "commands": {
+    "find-plus-one": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      },
+      "description": "Send a 'toggle-feature' event"
+    }
+  },
+  "web_accessible_resources": [
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "tabHide",
+    "<all_urls>",
+    "contextMenus"
+  ]
+}
